@@ -14,11 +14,11 @@ jobs:
 
     steps:
       - name: Check out code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         
     
       - name: Build the Docker image
-      - uses: mr-smithers-excellent/docker-build-push@v6   
+        uses: mr-smithers-excellent/docker-build-push@v6   
         with:
           image: yvey7/calibre_web_dockerized
           registry: docker.io
