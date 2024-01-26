@@ -1,0 +1,26 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v3
+        name: Check out code
+    
+      - name: Build the Docker image
+      - uses: mr-smithers-excellent/docker-build-push@v6   
+        with:
+          image: yvey7/calibre_web_dockerized
+          registry: docker.io
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+
