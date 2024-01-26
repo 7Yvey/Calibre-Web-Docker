@@ -12,9 +12,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
+      - name: Check out code
       - uses: actions/checkout@v3
-        name: Check out code
+        
     
       - name: Build the Docker image
       - uses: mr-smithers-excellent/docker-build-push@v6   
