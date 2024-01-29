@@ -18,7 +18,7 @@ jobs:
         
     
       - name: Build the Docker image
-        uses: mr-smithers-excellent/docker-build-push@v7   
+        uses: mr-smithers-excellent/docker-build-push@v6   
         with:
           image: yvey7/calibre_web_dockerized
           registry: docker.io 
